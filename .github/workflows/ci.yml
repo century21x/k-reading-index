@@ -1,0 +1,50 @@
+name: CI
+
+on:
+  push:
+    branches: [master, main]
+  pull_request:
+    branches: [master, main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.10"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Import seed passages
+        working-directory: backend
+        run: python scripts/import_passages.py
+
+      - name: Start server
+        working-directory: backend
+        run: |
+          uvicorn main:app --host 127.0.0.1 --port 8000 &
+          sleep 8
+
+      - name: Smoke test — home page
+        run: curl -fsS http://127.0.0.1:8000/ | grep -q "K-Reading"
+
+      - name: Smoke test — analyze API
+        run: |
+          curl -fsS -X POST http://127.0.0.1:8000/api/analyze \
+            -H "Content-Type: application/json" \
+            -d '{"text":"안녕하세요. 오늘 날씨가 좋습니다."}' \
+            | grep -q "k_ar_level"
+
+      - name: Smoke test — start test session
+        run: |
+          curl -fsS -X POST http://127.0.0.1:8000/api/test/sessions \
+            -H "Content-Type: application/json" \
+            -d '{"native_language":"en","korean_study_months":6}' \
+            | grep -q "session_id"

@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: k-reading-index
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt && cd backend && python scripts/import_passages.py
+    startCommand: cd backend && uvicorn main:app --host 0.0.0.0 --port $PORT
+    healthCheckPath: /
+    envVars:
+      - key: PYTHON_VERSION
+        value: "3.10.0"

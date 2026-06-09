@@ -18,9 +18,12 @@ BACKEND_DIR = Path(__file__).resolve().parent.parent
 if str(BACKEND_DIR) not in sys.path:
     sys.path.insert(0, str(BACKEND_DIR))
 
+from sqlalchemy import func, select
+
 from analyzer import analyze_text_complexity  # noqa: E402
 from database.connection import SessionLocal  # noqa: E402
 from database.init_db import init_database  # noqa: E402
+from models.passage import Passage
 from services.passage_service import create_passage_from_dict  # noqa: E402
 
 
@@ -37,7 +40,11 @@ def merge_defaults(data: dict, defaults: dict) -> dict:
     return merged
 
 
-def import_file(path: Path, dry_run: bool = False) -> int:
+def passage_count(db) -> int:
+    return db.scalar(select(func.count()).select_from(Passage).where(Passage.is_active.is_(True))) or 0
+
+
+def import_file(path: Path, dry_run: bool = False, force: bool = False) -> int:
     payload = load_json(path)
     defaults = {
         k: payload[k]
@@ -59,6 +66,11 @@ def import_file(path: Path, dry_run: bool = False) -> int:
 
     init_database()
     db = SessionLocal()
+    if not dry_run and not force and passage_count(db) > 0:
+        print(f"Skip import: {passage_count(db)} active passage(s) already in database. Use --force to re-import.")
+        db.close()
+        return 0
+
     count = 0
     try:
         for item in passages:
@@ -93,13 +105,14 @@ def main() -> None:
         help="JSON file path",
     )
     parser.add_argument("--dry-run", action="store_true", help="Validate without writing")
+    parser.add_argument("--force", action="store_true", help="Import even if passages already exist")
     args = parser.parse_args()
 
     path = args.file if args.file.is_absolute() else BACKEND_DIR / args.file
     if not path.exists():
         raise SystemExit(f"File not found: {path}")
 
-    total = import_file(path, dry_run=args.dry_run)
+    total = import_file(path, dry_run=args.dry_run, force=args.force)
     action = "Validated" if args.dry_run else "Imported"
     print(f"{action} {total} passage(s) from {path.name}")
 
