@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K-Reading Test | Korean Reading Assessment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container app-container--wide">
+        <nav class="top-nav">
+            <a href="index.html" class="back-link" id="home-link">← Home</a>
+            <div class="test-progress hidden" id="test-progress">
+                <span id="progress-label">Round 1 / 6</span>
+                <div class="progress-bar">
+                    <div class="progress-bar__fill" id="progress-fill"></div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Intro -->
+        <section id="screen-intro" class="screen">
+            <header class="app-header">
+                <div class="logo">
+                    <div class="logo-icon"></div>
+                    <h1>K-Reading Test</h1>
+                </div>
+                <p class="subtitle">Adaptive Korean reading assessment for learners</p>
+            </header>
+
+            <div class="glass-panel">
+                <h2 class="section-title">Before you start</h2>
+                <p class="intro-text">
+                    You will read short Korean passages and answer multiple-choice questions.
+                    The test adapts to your level and estimates your <strong>TOPIK reading level</strong>.
+                    Allow about <strong>15–20 minutes</strong>. You cannot go back to previous questions.
+                </p>
+
+                <div class="form-grid">
+                    <label class="field">
+                        <span class="field__label">Name (optional)</span>
+                        <input type="text" id="input-name" placeholder="Your name" maxlength="40">
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Native language</span>
+                        <select id="input-lang">
+                            <option value="en">English</option>
+                            <option value="zh">Chinese</option>
+                            <option value="vi">Vietnamese</option>
+                            <option value="ja">Japanese</option>
+                            <option value="th">Thai</option>
+                            <option value="id">Indonesian</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span class="field__label">How long have you studied Korean?</span>
+                        <select id="input-months">
+                            <option value="0">Just started (0–2 months)</option>
+                            <option value="4">A few months (3–5 months)</option>
+                            <option value="8" selected>About 6–11 months</option>
+                            <option value="18">1–2 years</option>
+                            <option value="30">More than 2 years</option>
+                        </select>
+                    </label>
+                    <label class="field">
+                        <span class="field__label">Self-assessed TOPIK (optional)</span>
+                        <select id="input-topik">
+                            <option value="">Not sure</option>
+                            <option value="1">Level 1</option>
+                            <option value="2">Level 2</option>
+                            <option value="3">Level 3</option>
+                            <option value="4">Level 4</option>
+                            <option value="5">Level 5</option>
+                            <option value="6">Level 6</option>
+                        </select>
+                    </label>
+                </div>
+
+                <div class="action-bar">
+                    <button id="start-btn" class="primary-btn">
+                        <span class="btn-text">Start Test</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reading -->
+        <section id="screen-reading" class="screen hidden">
+            <div class="glass-panel">
+                <div class="round-meta">
+                    <span class="badge" id="reading-round-badge">Round 1</span>
+                    <span class="badge badge--accent" id="reading-level-badge">TOPIK ~2.5</span>
+                </div>
+                <h2 class="passage-title" id="passage-title"></h2>
+                <p class="passage-subtitle hidden" id="passage-title-en"></p>
+                <article class="passage-content" id="passage-content"></article>
+                <p class="hint-text">Read the passage carefully. When you are ready, continue to the questions.</p>
+                <div class="action-bar">
+                    <button id="to-questions-btn" class="primary-btn">Answer Questions →</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Question -->
+        <section id="screen-question" class="screen hidden">
+            <div class="glass-panel">
+                <div class="question-header">
+                    <span class="badge" id="question-index-badge">Question 1 / 5</span>
+                    <span class="badge badge--muted" id="question-type-badge">detail</span>
+                </div>
+                <p class="question-stem" id="question-stem"></p>
+                <p class="question-stem-en hidden" id="question-stem-en"></p>
+                <div class="choices" id="choices-container"></div>
+                <div class="action-bar">
+                    <button id="submit-answer-btn" class="primary-btn" disabled>
+                        <span class="btn-text">Submit Answer</span>
+                        <div class="loader hidden"></div>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Transition -->
+        <section id="screen-transition" class="screen hidden">
+            <div class="glass-panel transition-panel">
+                <div class="loader loader--large"></div>
+                <h2 class="section-title">Preparing next passage…</h2>
+                <p class="intro-text" id="transition-text">Adjusting difficulty based on your answers.</p>
+            </div>
+        </section>
+
+        <!-- Result -->
+        <section id="screen-result" class="screen hidden">
+            <header class="app-header">
+                <h1 class="result-title">Your Result</h1>
+            </header>
+            <div class="glass-panel">
+                <div class="score-display">
+                    <div class="score-circle score-circle--large">
+                        <svg class="progress-ring" width="200" height="200">
+                            <circle class="progress-ring__circle progress-ring__circle--result" stroke="white" stroke-width="10" fill="transparent" r="88" cx="100" cy="100"/>
+                        </svg>
+                        <div class="score-value">
+                            <span class="label">TOPIK Reading</span>
+                            <span class="number number--result" id="final-topik">0.0</span>
+                            <span class="cefr-badge" id="final-cefr">B1</span>
+                        </div>
+                    </div>
+                    <p class="score-summary" id="result-summary"></p>
+                </div>
+
+                <div class="stats-grid stats-grid--3">
+                    <div class="stat-card">
+                        <span class="stat-label">Rounds</span>
+                        <span class="stat-value" id="stat-rounds">0</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">Accuracy</span>
+                        <span class="stat-value" id="stat-accuracy">0%</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-label">CEFR</span>
+                        <span class="stat-value" id="stat-cefr">B1</span>
+                    </div>
+                </div>
+
+                <h3 class="section-title section-title--sm">Round breakdown</h3>
+                <div class="round-table-wrap">
+                    <table class="round-table" id="round-table">
+                        <thead>
+                            <tr>
+                                <th>Round</th>
+                                <th>Passage</th>
+                                <th>Score</th>
+                                <th>Level after</th>
+                            </tr>
+                        </thead>
+                        <tbody id="round-table-body"></tbody>
+                    </table>
+                </div>
+
+                <div class="action-bar action-bar--center">
+                    <a href="test.html" class="primary-btn primary-btn--link">Take Test Again</a>
+                    <a href="index.html" class="secondary-btn">Back to Home</a>
+                </div>
+            </div>
+        </section>
+
+        <footer class="app-footer">
+            <p>K-Reading Test · Adaptive TOPIK reading estimate</p>
+        </footer>
+    </div>
+    <script src="test.js"></script>
+</body>
+</html>

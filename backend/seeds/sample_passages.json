@@ -1,0 +1,418 @@
+{
+  "passages": [
+    {
+      "title": "편의점에서",
+      "title_en": "At the Convenience Store",
+      "content": "안녕하세요. 저는 마리입니다. 저는 베트남 사람입니다. 오늘 저는 편의점에 갔습니다. 편의점에는 음식과 음료가 많습니다. 저는 물 한 병과 빵을 샀습니다. 가격은 3,500원이었습니다. 저는 카드로 결제했습니다.",
+      "target_topik_level": 1.5,
+      "cefr_level": "A1",
+      "topic_category": "daily_life",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "topic_identification",
+          "stem": "이 글은 어디에 대한 이야기입니까?",
+          "stem_en": "What place is this text about?",
+          "choices": [
+            {"label": "A", "text": "학교", "text_en": "School", "is_correct": false},
+            {"label": "B", "text": "편의점", "text_en": "Convenience store", "is_correct": true},
+            {"label": "C", "text": "병원", "text_en": "Hospital", "is_correct": false},
+            {"label": "D", "text": "공원", "text_en": "Park", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "마리는 무엇을 샀습니까?",
+          "stem_en": "What did Mari buy?",
+          "choices": [
+            {"label": "A", "text": "우유와 과자", "is_correct": false},
+            {"label": "B", "text": "물과 빵", "is_correct": true},
+            {"label": "C", "text": "커피와 케이크", "is_correct": false},
+            {"label": "D", "text": "주스와 라면", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "content_match",
+          "stem": "글의 내용과 같은 것을 고르십시오.",
+          "stem_en": "Choose the statement that matches the text.",
+          "choices": [
+            {"label": "A", "text": "마리는 현금으로 결제했습니다.", "is_correct": false},
+            {"label": "B", "text": "가격은 3,500원이었습니다.", "is_correct": true},
+            {"label": "C", "text": "편의점에 음료가 없었습니다.", "is_correct": false},
+            {"label": "D", "text": "마리는 한국 사람입니다.", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "vocabulary_context",
+          "stem": "'결제'의 의미로 알맞은 것은?",
+          "stem_en": "What does '결제' mean here?",
+          "choices": [
+            {"label": "A", "text": "물건 값을 내다", "is_correct": true},
+            {"label": "B", "text": "음식을 먹다", "is_correct": false},
+            {"label": "C", "text": "길을 묻다", "is_correct": false},
+            {"label": "D", "text": "전화를 하다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "inference",
+          "stem": "이 글을 통해 알 수 있는 것은?",
+          "stem_en": "What can you infer from this text?",
+          "choices": [
+            {"label": "A", "text": "마리는 한국에서 생활하고 있다.", "is_correct": true},
+            {"label": "B", "text": "마리는 편의점에서 일한다.", "is_correct": false},
+            {"label": "C", "text": "마리는 빵을 만들었다.", "is_correct": false},
+            {"label": "D", "text": "마리는 오늘 학교에 갔다.", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "지하철을 타요",
+      "title_en": "Taking the Subway",
+      "content": "서울에는 지하철이 많습니다. 지하철은 빠르고 편리합니다. 먼저 교통카드를 준비합니다. 게이트에 카드를 대면 문이 열립니다. 안쪽으로 들어가서 노선도를 확인하세요. 목적지 방향으로 기다리면 됩니다. 사람이 많을 때는 줄을 서서 기다립니다.",
+      "target_topik_level": 2.0,
+      "cefr_level": "A2",
+      "topic_category": "public_info",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "practical_info",
+          "stem": "지하철을 타기 전에 무엇을 준비해야 합니까?",
+          "stem_en": "What should you prepare before taking the subway?",
+          "choices": [
+            {"label": "A", "text": "여권", "is_correct": false},
+            {"label": "B", "text": "교통카드", "is_correct": true},
+            {"label": "C", "text": "지도 책", "is_correct": false},
+            {"label": "D", "text": "우산", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "게이트에 카드를 대면 어떻게 됩니까?",
+          "choices": [
+            {"label": "A", "text": "문이 열립니다", "is_correct": true},
+            {"label": "B", "text": "알람이 울립니다", "is_correct": false},
+            {"label": "C", "text": "카드가 사라집니다", "is_correct": false},
+            {"label": "D", "text": "직원이 옵니다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "content_match",
+          "stem": "글의 내용과 같은 것은?",
+          "choices": [
+            {"label": "A", "text": "지하철은 느리다", "is_correct": false},
+            {"label": "B", "text": "노선도를 확인해야 한다", "is_correct": true},
+            {"label": "C", "text": "카드 없이 탈 수 있다", "is_correct": false},
+            {"label": "D", "text": "줄을 서지 않아도 된다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "vocabulary_context",
+          "stem": "'편리하다'의 뜻은?",
+          "choices": [
+            {"label": "A", "text": "사용하기 쉽고 좋다", "is_correct": true},
+            {"label": "B", "text": "매우 비싸다", "is_correct": false},
+            {"label": "C", "text": "위험하다", "is_correct": false},
+            {"label": "D", "text": "조용하다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "main_idea",
+          "stem": "이 글의 중심 내용은?",
+          "choices": [
+            {"label": "A", "text": "지하철 이용 방법", "is_correct": true},
+            {"label": "B", "text": "서울의 역사", "is_correct": false},
+            {"label": "C", "text": "버스와 지하철 비교", "is_correct": false},
+            {"label": "D", "text": "교통카드 종류", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "한국 음식 소개",
+      "title_en": "Korean Food",
+      "content": "한국에는 맛있는 음식이 많습니다. 김치는 한국의 대표 음식입니다. 매운 맛이 특징이지만 건강에도 좋습니다. 비빔밥은 여러 나물과 고추장을 넣어 비벼 먹습니다. 외국인들도 비빔밥을 좋아합니다. 한국 사람들은 보통 젓가락과 숟가락을 함께 사용합니다.",
+      "target_topik_level": 2.5,
+      "cefr_level": "A2",
+      "topic_category": "culture",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "main_idea",
+          "stem": "이 글의 주제는 무엇입니까?",
+          "choices": [
+            {"label": "A", "text": "한국 음식", "is_correct": true},
+            {"label": "B", "text": "한국 역사", "is_correct": false},
+            {"label": "C", "text": "한국어 문법", "is_correct": false},
+            {"label": "D", "text": "한국 축제", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "비빔밥에 넣는 것은?",
+          "choices": [
+            {"label": "A", "text": "나물과 고추장", "is_correct": true},
+            {"label": "B", "text": "치즈와 케첩", "is_correct": false},
+            {"label": "C", "text": "우유와 설탕", "is_correct": false},
+            {"label": "D", "text": "소금만", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "content_match",
+          "stem": "글과 같은 내용은?",
+          "choices": [
+            {"label": "A", "text": "김치는 단맛이 특징이다", "is_correct": false},
+            {"label": "B", "text": "외국인도 비빔밥을 좋아한다", "is_correct": true},
+            {"label": "C", "text": "한국인은 포크만 쓴다", "is_correct": false},
+            {"label": "D", "text": "김치는 건강에 나쁘다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "inference",
+          "stem": "글에서 추론할 수 있는 것은?",
+          "choices": [
+            {"label": "A", "text": "한국 음식은 외국인에게도 인기가 있다", "is_correct": true},
+            {"label": "B", "text": "한국에는 음식이 없다", "is_correct": false},
+            {"label": "C", "text": "비빔밥은 먹지 않는다", "is_correct": false},
+            {"label": "D", "text": "김치는 디저트이다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "vocabulary_context",
+          "stem": "'대표'의 의미는?",
+          "choices": [
+            {"label": "A", "text": "가장 잘 알려진", "is_correct": true},
+            {"label": "B", "text": "가장 작은", "is_correct": false},
+            {"label": "C", "text": "가장 싼", "is_correct": false},
+            {"label": "D", "text": "가장 오래된", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "한국어 학습의 즐거움",
+      "title_en": "The Joy of Learning Korean",
+      "content": "많은 외국인이 한국어를 배우고 있습니다. 처음에는 발음이 어렵지만 매일 연습하면 점점 나아집니다. 한글은 과학적인 문자라고 알려져 있어 배우기 쉽다는 평가를 받습니다. 한국 드라마와 음악을 보면서 공부하는 사람도 많습니다. 이렇게 재미있는 방법으로 학습하면 동기가 높아집니다. 또한 한국 친구와 대화하면 실력이 빨리 늘기도 합니다.",
+      "target_topik_level": 3.0,
+      "cefr_level": "B1",
+      "topic_category": "school",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "main_idea",
+          "stem": "이 글의 중심 생각은?",
+          "choices": [
+            {"label": "A", "text": "한국어 학습 방법과 장점", "is_correct": true},
+            {"label": "B", "text": "한국 드라마 순위", "is_correct": false},
+            {"label": "C", "text": "한글의 역사", "is_correct": false},
+            {"label": "D", "text": "한국 여행 코스", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "한글이 쉽다고 평가받는 이유는?",
+          "choices": [
+            {"label": "A", "text": "과학적인 문자이기 때문", "is_correct": true},
+            {"label": "B", "text": "글자 수가 적기 때문", "is_correct": false},
+            {"label": "C", "text": "영어와 같기 때문", "is_correct": false},
+            {"label": "D", "text": "문법이 없기 때문", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "fill_blank",
+          "stem": "( )에 들어갈 말로 알맞은 것은? '재미있는 방법으로 학습하면 ( )가 높아집니다.'",
+          "choices": [
+            {"label": "A", "text": "동기", "is_correct": true},
+            {"label": "B", "text": "피로", "is_correct": false},
+            {"label": "C", "text": "걱정", "is_correct": false},
+            {"label": "D", "text": "비용", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "content_mismatch",
+          "stem": "글의 내용과 다른 것은?",
+          "choices": [
+            {"label": "A", "text": "처음에는 발음이 어렵다", "is_correct": false},
+            {"label": "B", "text": "매일 연습하면 나아진다", "is_correct": false},
+            {"label": "C", "text": "한국 친구와 대화하면 실력이 줄어든다", "is_correct": true},
+            {"label": "D", "text": "드라마로 공부하는 사람이 있다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "inference",
+          "stem": "글쓴이가 말하고자 하는 것은?",
+          "choices": [
+            {"label": "A", "text": "다양한 방법으로 꾸준히 배우면 한국어 실력이 늘 수 있다", "is_correct": true},
+            {"label": "B", "text": "한국어는 배우지 않는 것이 좋다", "is_correct": false},
+            {"label": "C", "text": "발음 연습은 필요 없다", "is_correct": false},
+            {"label": "D", "text": "한글은 배우기 어렵다", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "환경을 지키는 작은 실천",
+      "title_en": "Small Actions for the Environment",
+      "content": "최근 환경 문제가 심각해지고 있습니다. 그러나 개인도 작은 실천으로 변화를 만들 수 있습니다. 예를 들어 일회용 컵 대신 텀블러를 사용하고, 사용하지 않는 전등은 끄는 것이 좋습니다. 대중교통을 이용하면 탄소 배출도 줄일 수 있습니다. 이러한 습관은 비용도 절약하게 해 줍니다. 결국 환경 보호는 우리 모두의 책임이라는 점을 기억해야 합니다.",
+      "target_topik_level": 3.5,
+      "cefr_level": "B1",
+      "topic_category": "news_easy",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "main_idea",
+          "stem": "이 글의 요지는?",
+          "choices": [
+            {"label": "A", "text": "개인의 작은 실천이 환경 보호에 도움이 된다", "is_correct": true},
+            {"label": "B", "text": "환경 문제는 해결할 수 없다", "is_correct": false},
+            {"label": "C", "text": "텀블러는 필요 없다", "is_correct": false},
+            {"label": "D", "text": "대중교통은 비싸다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "글에서 제안하지 않은 것은?",
+          "choices": [
+            {"label": "A", "text": "텀블러 사용", "is_correct": false},
+            {"label": "B", "text": "전등 끄기", "is_correct": false},
+            {"label": "C", "text": "대중교통 이용", "is_correct": false},
+            {"label": "D", "text": "일회용품 더 쓰기", "is_correct": true}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "inference",
+          "stem": "이 글의 분위기로 가장 알맞은 것은?",
+          "choices": [
+            {"label": "A", "text": "실천을 권장하는", "is_correct": true},
+            {"label": "B", "text": "비판만 하는", "is_correct": false},
+            {"label": "C", "text": "농담하는", "is_correct": false},
+            {"label": "D", "text": "슬퍼하는", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "vocabulary_context",
+          "stem": "'탄소 배출'과 관련된 내용은?",
+          "choices": [
+            {"label": "A", "text": "대중교통 이용이 도움이 된다", "is_correct": true},
+            {"label": "B", "text": "전등을 켜 두어야 한다", "is_correct": false},
+            {"label": "C", "text": "텀블러를 쓰면 안 된다", "is_correct": false},
+            {"label": "D", "text": "비용이 늘어난다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "content_match",
+          "stem": "글의 내용과 같은 것은?",
+          "choices": [
+            {"label": "A", "text": "좋은 습관은 비용 절약에도 도움이 된다", "is_correct": true},
+            {"label": "B", "text": "환경 보호는 기업만의 책임이다", "is_correct": false},
+            {"label": "C", "text": "개인은 아무것도 할 수 없다", "is_correct": false},
+            {"label": "D", "text": "환경 문제는 심각하지 않다", "is_correct": false}
+          ]
+        }
+      ]
+    },
+    {
+      "title": "디지털 시대의 읽기 습관",
+      "title_en": "Reading Habits in the Digital Age",
+      "content": "스마트폰이 보급되면서 사람들의 읽기 방식도 변했습니다. 짧은 글과 영상을 선호하는 경향이 강해졌지만, 깊이 있는 독서의 가치는 여전히 중요합니다. 연구에 따르면 꾸준히 책을 읽는 사람은 집중력과 어휘력이 더 높게 나타났습니다. 물론 디지털 기기로 전자책을 읽는 것도 좋은 방법입니다. 중요한 것은 매체가 아니라 꾸준히 읽으려는 태도라고 할 수 있습니다. 따라서 하루에 조금이라도 읽는 시간을 만들어 보는 것이 좋겠습니다.",
+      "target_topik_level": 4.0,
+      "cefr_level": "B2",
+      "topic_category": "news_easy",
+      "source_type": "original",
+      "license_type": "original",
+      "commercial_ok": true,
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "main_idea",
+          "stem": "필자가 강조하는 것은?",
+          "choices": [
+            {"label": "A", "text": "꾸준히 읽으려는 태도", "is_correct": true},
+            {"label": "B", "text": "스마트폰 사용 금지", "is_correct": false},
+            {"label": "C", "text": "영상만 보는 것", "is_correct": false},
+            {"label": "D", "text": "종이책만 읽는 것", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 2,
+          "question_type": "detail",
+          "stem": "연구 결과로 맞는 것은?",
+          "choices": [
+            {"label": "A", "text": "꾸준히 읽는 사람의 집중력이 더 높다", "is_correct": true},
+            {"label": "B", "text": "독서는 집중력에 영향이 없다", "is_correct": false},
+            {"label": "C", "text": "전자책은 해롭다", "is_correct": false},
+            {"label": "D", "text": "어휘력은 줄어든다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 3,
+          "question_type": "inference",
+          "stem": "필자의 태도로 가장 알맞은 것은?",
+          "choices": [
+            {"label": "A", "text": "디지털과 전통 독서를 모두 인정한다", "is_correct": true},
+            {"label": "B", "text": "디지털 독서를 부정한다", "is_correct": false},
+            {"label": "C", "text": "독서는 쓸모없다고 본다", "is_correct": false},
+            {"label": "D", "text": "짧은 글만 읽어야 한다고 주장한다", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 4,
+          "question_type": "fill_blank",
+          "stem": "( )에 들어갈 말로 알맞은 것은? '중요한 것은 매체가 아니라 ( )라고 할 수 있습니다.'",
+          "choices": [
+            {"label": "A", "text": "꾸준히 읽으려는 태도", "is_correct": true},
+            {"label": "B", "text": "비싼 책을 사는 것", "is_correct": false},
+            {"label": "C", "text": "빨리 읽는 속도", "is_correct": false},
+            {"label": "D", "text": "다른 사람과 경쟁", "is_correct": false}
+          ]
+        },
+        {
+          "order_index": 5,
+          "question_type": "content_mismatch",
+          "stem": "글의 내용과 다른 것은?",
+          "choices": [
+            {"label": "A", "text": "짧은 글을 선호하는 경향이 있다", "is_correct": false},
+            {"label": "B", "text": "깊이 있는 독서는 중요하다", "is_correct": false},
+            {"label": "C", "text": "전자책 읽기도 좋은 방법이다", "is_correct": false},
+            {"label": "D", "text": "매일 많이 읽어야만 독서의 효과가 있다", "is_correct": true}
+          ]
+        }
+      ]
+    }
+  ]
+}

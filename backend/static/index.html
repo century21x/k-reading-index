@@ -1,76 +1,55 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K-Reading Index | 한국어 독서 지수 평가기</title>
+    <title>K-Reading Index | Korean Reading Assessment</title>
     <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="app-container">
+    <div class="app-container app-container--wide">
         <header class="app-header">
             <div class="logo">
                 <div class="logo-icon"></div>
                 <h1>K-Reading Index</h1>
             </div>
-            <p class="subtitle">인공지능 기반 한국어 텍스트 난이도 분석기</p>
+            <p class="subtitle">Korean reading tools for learners &amp; educators</p>
         </header>
 
-        <main class="main-content">
-            <section class="input-section glass-panel">
-                <label for="text-input" class="section-title">분석할 텍스트를 입력하세요</label>
-                <textarea id="text-input" placeholder="여기에 동화, 뉴스, 에세이 등 분석하고 싶은 한국어 글을 붙여넣으세요..."></textarea>
-                <div class="action-bar">
-                    <button id="analyze-btn" class="primary-btn">
-                        <span class="btn-text">텍스트 분석하기</span>
-                        <div class="loader hidden"></div>
-                    </button>
-                </div>
-            </section>
+        <main class="mode-grid">
+            <a href="test.html" class="mode-card glass-panel">
+                <span class="mode-card__badge">Recommended</span>
+                <h2 class="mode-card__title">K-Reading Test</h2>
+                <p class="mode-card__desc">
+                    Adaptive reading assessment for Korean learners.
+                    Get your estimated <strong>TOPIK reading level</strong> in about 15 minutes.
+                </p>
+                <ul class="mode-card__list">
+                    <li>Read passages &amp; answer questions</li>
+                    <li>TOPIK 1 – 6 level estimate</li>
+                    <li>Designed for foreign learners (KSL)</li>
+                </ul>
+                <span class="mode-card__cta">Start Test →</span>
+            </a>
 
-            <section class="result-section glass-panel hidden" id="result-panel">
-                <h2 class="section-title">분석 결과</h2>
-                <div class="score-display">
-                    <div class="score-circle">
-                        <svg class="progress-ring" width="160" height="160">
-                            <circle class="progress-ring__circle" stroke="white" stroke-width="8" fill="transparent" r="70" cx="80" cy="80"/>
-                        </svg>
-                        <div class="score-value">
-                            <span class="label">K-AR 레벨</span>
-                            <span class="number" id="k-ar-score">0.0</span>
-                        </div>
-                    </div>
-                    <div class="score-summary" id="score-summary">
-                        이 텍스트의 난이도 수준입니다.
-                    </div>
-                </div>
-
-                <div class="stats-grid">
-                    <div class="stat-card">
-                        <span class="stat-label">문장 수</span>
-                        <span class="stat-value" id="stat-sentences">0</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-label">단어 수</span>
-                        <span class="stat-value" id="stat-words">0</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-label">평균 문장 길이</span>
-                        <span class="stat-value" id="stat-avg-len">0.0</span>
-                    </div>
-                    <div class="stat-card">
-                        <span class="stat-label">복잡한 단어 비율</span>
-                        <span class="stat-value" id="stat-complex-ratio">0%</span>
-                    </div>
-                </div>
-            </section>
+            <a href="analyze.html" class="mode-card glass-panel mode-card--secondary">
+                <h2 class="mode-card__title">Text Analyzer</h2>
+                <p class="mode-card__desc">
+                    Paste any Korean text to estimate its reading difficulty (K-AR index).
+                </p>
+                <ul class="mode-card__list">
+                    <li>For teachers &amp; content creators</li>
+                    <li>Sentence &amp; vocabulary stats</li>
+                    <li>Powered by Kiwi morphological analysis</li>
+                </ul>
+                <span class="mode-card__cta">Analyze Text →</span>
+            </a>
         </main>
 
         <footer class="app-footer">
-            <p>&copy; 2026 K-Reading Index Project. Powered by KiwiPiePy.</p>
+            <p>&copy; 2026 K-Reading Index Project</p>
         </footer>
     </div>
-    <script src="app.js"></script>
 </body>
 </html>

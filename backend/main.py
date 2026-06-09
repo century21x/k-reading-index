@@ -1,12 +1,25 @@
+import os
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.staticfiles import StaticFiles
-from fastapi.responses import RedirectResponse
-from pydantic import BaseModel
-from analyzer import analyze_text_complexity
-import os
 
-app = FastAPI(title="K-Reading Index API", description="한국어 텍스트 난이도 측정 API")
+from database.init_db import init_database
+from routers import analyze, test
+
+
+@asynccontextmanager
+async def lifespan(_app: FastAPI):
+    init_database()
+    yield
+
+
+app = FastAPI(
+    title="K-Reading Index API",
+    description="한국어 읽기 실력 진단 API (KSL / TOPIK)",
+    lifespan=lifespan,
+)
 
 app.add_middleware(
     CORSMiddleware,
@@ -16,14 +29,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-class TextRequest(BaseModel):
-    text: str
+app.include_router(analyze.router)
+app.include_router(test.router)
 
-@app.post("/api/analyze")
-def analyze(request: TextRequest):
-    result = analyze_text_complexity(request.text)
-    return result
-
-# Create static dir if not exists
 os.makedirs("static", exist_ok=True)
 app.mount("/", StaticFiles(directory="static", html=True), name="static")

@@ -1,0 +1,34 @@
+{
+  "_comment": "EPS-TOPIK 공개문제집 등을 수동 변환할 때 사용하는 템플릿입니다.",
+  "source_type": "eps_public",
+  "source_name": "EPS-TOPIK 공개문제집",
+  "source_url": "https://epstopik.hrdkorea.or.kr/epstopik/book/pub/publicWorkBookList.do",
+  "license_type": "reference_only",
+  "commercial_ok": false,
+  "derivative_ok": false,
+  "passages": [
+    {
+      "title": "지문 제목",
+      "title_en": "Passage title in English",
+      "content": "지문 본문을 여기에 입력합니다.",
+      "target_topik_level": 2.0,
+      "cefr_level": "A2",
+      "topic_category": "workplace",
+      "external_id": "EPS-READ-0001",
+      "questions": [
+        {
+          "order_index": 1,
+          "question_type": "topic_identification",
+          "stem": "다음은 무엇에 대한 글입니까?",
+          "stem_en": "What is this text about?",
+          "choices": [
+            {"label": "A", "text": "선지 1", "is_correct": false},
+            {"label": "B", "text": "선지 2", "is_correct": true},
+            {"label": "C", "text": "선지 3", "is_correct": false},
+            {"label": "D", "text": "선지 4", "is_correct": false}
+          ]
+        }
+      ]
+    }
+  ]
+}
